@@ -13,14 +13,16 @@ class Registro extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-          image: AssetImage("assets/fondo4.png"),
+          image: AssetImage("assets/fondo5.png"),
           fit: BoxFit.cover,
         )),
         child: CustomPaint(
           painter: RegistroPainter(),
           child: Column(children: [
             Padding(
-              padding: EdgeInsets.only(top: 180, left: 280),
+              padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.25,
+                  left: MediaQuery.of(context).size.width * 0.50),
               child: Row(
                 children: [
                   TextButton(
