@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:proyecto_fast_reservation/UI/CustomPainter/painterRegistrar.dart';
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 class Registro extends StatelessWidget {
@@ -47,7 +46,7 @@ class Registro extends StatelessWidget {
                       style: TextStyle(color: Colors.grey, fontSize: 15),
                     ),
                     Text(
-                      "SIGN UP ",
+                      " SIGN UP",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ],

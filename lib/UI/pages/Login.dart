@@ -107,7 +107,9 @@ class Login extends StatelessWidget {
                         Color(0xFF00BBFF),
                       ])),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/inicioAdmin');
+                    },
                     child: Text("Ingresar",
                         style: TextStyle(color: Colors.white, fontSize: 15)),
                   )),
