@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_fast_reservation/UI/pages/GestionarMesas.dart';
+import 'package:proyecto_fast_reservation/UI/pages/GestionarMeseros.dart';
+import 'package:proyecto_fast_reservation/UI/pages/GestionarProductos.dart';
 import 'package:proyecto_fast_reservation/UI/pages/InicioAdmin.dart';
 import 'package:proyecto_fast_reservation/UI/pages/Login.dart';
 import 'package:proyecto_fast_reservation/UI/pages/Registro.dart';
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
         '/login': (context) => Login(),
         '/registro': (context) => Registro(),
         '/gestionarMesas': (context) => GestionarMesas(),
+        '/gestionarProductos': (context) => GestionarProductos(),
+        '/gestionarMeseros': (context) => GestionarMeseros(),
         '/inicioAdmin': (context) => InicioAdmin(),
       },
     );

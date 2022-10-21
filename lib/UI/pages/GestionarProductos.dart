@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-class GestionarMesas extends StatelessWidget {
-  const GestionarMesas({Key? key}) : super(key: key);
+class GestionarProductos extends StatelessWidget {
+  const GestionarProductos({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Gestionar Mesas"),
+        title: const Text("Gestionar Productos"),
         backgroundColor: const Color(0xFF005E80),
       ),
       body: Container(
@@ -37,7 +37,7 @@ class GestionarMesas extends StatelessWidget {
               margin: EdgeInsets.only(right: 20.0, left: 20.0),
               child: TextField(
                 decoration: InputDecoration(
-                  labelText: 'Id de la Mesa',
+                  labelText: 'Id del Producto',
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(40)),
                 ),
@@ -51,7 +51,7 @@ class GestionarMesas extends StatelessWidget {
               margin: EdgeInsets.only(right: 20.0, left: 20.0),
               child: TextField(
                 decoration: InputDecoration(
-                  labelText: 'Nombre de la Mesa',
+                  labelText: 'Nombre del Producto',
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(40)),
                 ),
@@ -65,7 +65,21 @@ class GestionarMesas extends StatelessWidget {
               margin: EdgeInsets.only(right: 20.0, left: 20.0),
               child: TextField(
                 decoration: InputDecoration(
-                  labelText: 'Descripcion de la Mesa',
+                  labelText: 'Precio del Producto',
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(40)),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 20,
+              height: 10,
+            ),
+            Container(
+              margin: EdgeInsets.only(right: 20.0, left: 20.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Descripcion del Producto',
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(40)),
                 ),

@@ -19,7 +19,7 @@ class InicioAdmin extends StatelessWidget {
             icon: Icon(Icons.exit_to_app),
           ),
         ],
-        title: const Text("Gestionar Menu"),
+        title: const Text("Gestion Menu"),
         backgroundColor: const Color(0xFF005E80),
       ),
       body: Container(
@@ -59,7 +59,7 @@ class InicioAdmin extends StatelessWidget {
               ),
               child: TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/gestionarMesas');
+                  Navigator.pushNamed(context, '/gestionarProductos');
                 },
                 child: Text("Gestionar Productos",
                     style: TextStyle(color: Colors.white, fontSize: 15)),
@@ -78,7 +78,7 @@ class InicioAdmin extends StatelessWidget {
               ),
               child: TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/gestionarMesas');
+                  Navigator.pushNamed(context, '/gestionarMeseros');
                 },
                 child: Text("Gestionar Meseros",
                     style: TextStyle(
@@ -139,7 +139,7 @@ class DrawerAdmin extends StatelessWidget {
               margin: EdgeInsets.only(top: 5.0),
               child: TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/gestionarMesas');
+                  Navigator.pushNamed(context, '/gestionarProductos');
                 },
                 child: Text("Gestionar Productos",
                     style: TextStyle(
@@ -153,7 +153,7 @@ class DrawerAdmin extends StatelessWidget {
               margin: EdgeInsets.only(top: 5.0),
               child: TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/gestionarMesas');
+                  Navigator.pushNamed(context, '/gestionarMeseros');
                 },
                 child: Text("Gestionar Meseros",
                     style: TextStyle(
