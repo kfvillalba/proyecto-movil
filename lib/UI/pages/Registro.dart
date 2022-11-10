@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import '../../domain/controller/controluser.dart';
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 class Registro extends StatelessWidget {
-  const Registro({Key? key}) : super(key: key);
-
+  Registro({Key? key}) : super(key: key);
+  TextEditingController controlsuer = TextEditingController();
+  TextEditingController controlpassword = TextEditingController();
+  TextEditingController controlrepeatpassword = TextEditingController();
+  TextEditingController controlname = TextEditingController();
+  TextEditingController controltelefono = TextEditingController();
+  ControlAuthFirebase controlAuth = Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,6 +77,7 @@ class Registro extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(right: 20.0, left: 20.0),
                 child: TextField(
+                  controller: controlsuer,
                   decoration: InputDecoration(
                     labelText: 'Nombre de Usuario',
                     border: OutlineInputBorder(
@@ -84,6 +92,7 @@ class Registro extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(right: 20.0, left: 20.0),
                 child: TextField(
+                  controller: controlpassword,
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Contraseña',
@@ -99,6 +108,23 @@ class Registro extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(right: 20.0, left: 20.0),
                 child: TextField(
+                  controller: controlrepeatpassword,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: 'Repetir Contraseña',
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(40)),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 20,
+                height: 10,
+              ),
+              Container(
+                margin: EdgeInsets.only(right: 20.0, left: 20.0),
+                child: TextField(
+                  controller: controlname,
                   decoration: InputDecoration(
                     labelText: 'Nombre y Apellido',
                     border: OutlineInputBorder(
@@ -113,6 +139,7 @@ class Registro extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(right: 20.0, left: 20.0),
                 child: TextField(
+                  controller: controltelefono,
                   decoration: InputDecoration(
                     labelText: 'Telefono',
                     border: OutlineInputBorder(
@@ -135,7 +162,32 @@ class Registro extends StatelessWidget {
                         Color(0xFF00BBFF),
                       ])),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      controlAuth
+                          .registrarEmail(
+                              controlsuer.text, controlpassword.text)
+                          .then((value) {
+                        if (controlAuth.emailf != 'Sin Registro') {
+                          Navigator.pushNamed(context, '/login');
+                        } else {
+                          Get.showSnackbar(const GetSnackBar(
+                            title: 'Validacion de Usuarios',
+                            message: 'Error desde logica',
+                            icon: Icon(Icons.warning),
+                            duration: Duration(seconds: 5),
+                            backgroundColor: Colors.red,
+                          ));
+                        }
+                      }).catchError((e) {
+                        Get.showSnackbar(const GetSnackBar(
+                          title: 'Validacion de Usuarios',
+                          message: 'Error de creacion',
+                          icon: Icon(Icons.warning),
+                          duration: Duration(seconds: 5),
+                          backgroundColor: Colors.red,
+                        ));
+                      });
+                    },
                     child: Text("Registrarse",
                         style: TextStyle(color: Colors.white, fontSize: 15)),
                   )),

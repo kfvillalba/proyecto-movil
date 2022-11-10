@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "36704320425",
+    "project_id": "proyecto-movil-3dcca",
+    "storage_bucket": "proyecto-movil-3dcca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36704320425:android:062bd8ab06a2535fbca2b8",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_fast_reservation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36704320425-8159tj2m383el80qbvitdoolreae3104.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQZcUBHdcWm3cqgsXNyOkZ89OVLkotm0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36704320425-8159tj2m383el80qbvitdoolreae3104.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
